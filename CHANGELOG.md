@@ -1,5 +1,20 @@
 # Changelog
 
+## [17.0.0](https://github.com/AstroNvim/astrocommunity/compare/v16.0.0...v17.0.0) (2025-01-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **linear-nvim:** Change leader from `<Leader>m` to `<Leader>L` ([#1314](https://github.com/AstroNvim/astrocommunity/issues/1314))
+
+### Bug Fixes
+
+* **avante-nvim:** fix typo in opts ([#1317](https://github.com/AstroNvim/astrocommunity/issues/1317)) ([532a545](https://github.com/AstroNvim/astrocommunity/commit/532a545db91bbc63be038fee99cf2666cc3b6350))
+* **avante-nvim:** update config for `render-markdown` ([532a545](https://github.com/AstroNvim/astrocommunity/commit/532a545db91bbc63be038fee99cf2666cc3b6350))
+* **laravel-nvim:** update required deps from v2 to v3 ([89c9960](https://github.com/AstroNvim/astrocommunity/commit/89c9960a7bb47d3f536f0e2d912228705c0e5ccc))
+* **linear-nvim:** Change leader from `&lt;Leader&gt;m` to `<Leader>L` ([#1314](https://github.com/AstroNvim/astrocommunity/issues/1314)) ([6426600](https://github.com/AstroNvim/astrocommunity/commit/6426600f2964f350377cc3627b868fc10286b286))
+* **pack:** update `laravel-nvim` required deps from v2 to v3 ([#1315](https://github.com/AstroNvim/astrocommunity/issues/1315)) ([89c9960](https://github.com/AstroNvim/astrocommunity/commit/89c9960a7bb47d3f536f0e2d912228705c0e5ccc))
+
 ## [16.0.0](https://github.com/AstroNvim/astrocommunity/compare/v15.0.0...v16.0.0) (2025-01-10)
 
 
