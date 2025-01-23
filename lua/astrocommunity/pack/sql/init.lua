@@ -10,6 +10,17 @@ return {
     },
   },
   {
+    "AstroNvim/astrolsp",
+    optional = true,
+    opts = {
+      formatting = {
+        disabled = {
+          "sqls",
+        },
+      },
+    },
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     optional = true,
     opts = function(_, opts)
@@ -26,10 +37,34 @@ return {
     end,
   },
   {
+    "jay-babu/mason-null-ls.nvim",
+    optional = true,
+    opts = {
+      ensure_installed = {
+        "sqlfluff",
+      },
+    },
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    optional = true,
+    opts = function(_, opts)
+      local null_ls = require "null-ls"
+      opts.sources = require("astrocore").list_insert_unique(opts.sources, {
+        null_ls.builtins.diagnostics.sqlfluff.with {
+          extra_args = { "--dialect", "ansi" },
+        },
+        null_ls.builtins.formatting.sqlfluff.with {
+          extra_args = { "--dialect", "ansi" },
+        },
+      })
+    end,
+  },
+  {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     optional = true,
     opts = function(_, opts)
-      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "sqls" })
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, { "sqlfluff", "sqls" })
     end,
   },
   {
